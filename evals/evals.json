@@ -1,0 +1,35 @@
+{
+  "skill_name": "skill-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make a skill for writing our weekly customer support summary. I pull the ticket export every Monday, group by topic, and write one paragraph per topic.",
+      "expected_output": "Classifies it as simple with the reason stated, builds a single SKILL.md with the three steps in the order given, names the ticket export as the input and asks where it lives, writes an output section with one part per paragraph, states assumptions above the draft, and runs it on one real export before calling it done."
+    },
+    {
+      "id": 2,
+      "prompt": "Turn how we write ad scripts into a skill. Sometimes we lead with the problem, sometimes with a customer story, sometimes with a side-by-side against the old way. It depends on the audience.",
+      "expected_output": "Classifies it as complex because the person named three ways and what the choice depends on, builds SKILL.md plus strategy.md plus processes with INDEX.md and one file per way, keeps the choice logic only in strategy.md and the steps only in the process files, and tests with two cases that should pick different processes."
+    },
+    {
+      "id": 3,
+      "prompt": "Make a skill that pulls the numbers, writes the report, and then also emails it to the team and updates the dashboard.",
+      "expected_output": "Says this is more than one job, builds the report skill first, names emailing and the dashboard update as separate skills to build next, and does not fold them into one."
+    },
+    {
+      "id": 4,
+      "prompt": "Our onboarding checklist has forty steps and a couple of them only apply if the person is a contractor. Make it a skill.",
+      "expected_output": "Classifies it as simple, because a long checklist with a conditional step is still one path, and does not create a strategy doc or a processes folder."
+    },
+    {
+      "id": 5,
+      "prompt": "The weekly-report skill keeps firing when I just ask what last week's revenue was.",
+      "expected_output": "Runs improve-existing-skill, reads the whole skill first, identifies the description line as the failing layer, tightens it with a does-not clause that sends single-number lookups away, and does not rewrite the rest of the skill."
+    },
+    {
+      "id": 6,
+      "prompt": "Build me a skill for the thing I did yesterday where I cleaned up that one spreadsheet.",
+      "expected_output": "Points out that a task done once may not need a skill, asks whether it will happen again, and offers to do the cleanup directly instead if it will not."
+    }
+  ]
+}

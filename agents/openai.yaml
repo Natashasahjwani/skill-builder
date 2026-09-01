@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Builder"
+  short_description: "Turn a repeatable task into a skill"
+  default_prompt: "Use $skill-builder to turn a task I do over and over into a skill I can run the same way every time."
